@@ -1,38 +1,179 @@
-.App {
-  text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.MetricBMI{
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+   border:3px solid rgb(224, 119, 119);
+   width:500px;
+   margin:0 auto;
+   margin-top: 5%;
+   padding: 20px;
+   border-radius: 14px;
+   background-image: url(img.png);
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center;
 }
-
-.App-link {
-  color: #61dafb;
+.ImperialBMI{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+   border:3px solid #76e0e0;
+   width:500px;
+   margin:0 auto;
+   margin-top: 5%;
+   padding: 20px;
+   border-radius: 14px;
+   background-image: url(img.png);
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center;
 }
-
-@keyframes App-logo-spin {
+input{
+  height: 22px;
+}
+.age{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top:9px;
+font-weight: 600;
+font-size:25px;
+z-index: 1;
+}
+.gender{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size:19px;
+}
+p{
+  margin-right: 10px;
+  font-size:25px;
+  font-weight: 600;
+}
+.height{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 8px;
+  font-size:25px;
+  font-weight: 600;
+  z-index: 1;
+}
+.weight{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 8px;
+  font-size:25px;
+  font-weight: 600;
+}
+.MetricSpan{
+  color:rgb(224, 119, 119);
+  font-size:17px;
+  font-weight: 700;
+  font-style: italic;
+}
+.ImperialSpan{
+  color:#76e0e0;
+  font-size:17px;
+  font-weight: 700;
+  font-style: italic;
+}
+.computeButtons{
+  margin-top:12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.computeButtons button:nth-child(1){
+  margin-right: 6px;
+  width: 100px;
+  height: 35px;
+  text-align: center;
+  border-radius: 12px;
+  font-size:14px;
+ font-weight: 600;
+ background-color: rgb(206, 204, 202);;
+}
+.computeButtons button:nth-child(2){
+  margin-right: 6px;
+  width: 70px;
+  height: 28px;
+  text-align: center;
+  border-radius: 12px;
+  font-weight: 600;
+  background-color: rgb(240, 240, 240);
+}
+.results{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.radioinput{
+  width: 16px;
+}
+.systems{
+display: flex;
+justify-content:space-between;
+align-items: center;
+width: 250px;
+}
+.systems button{
+  width: 110px;
+  height: 35px;
+  border-radius: 12px;
+  font-size:16px;
+  font-weight: 600;
+  background-color: rgb(206, 204, 202);
+}
+.activeMet{
+  background-color: rgb(224, 119, 119) !important;
+  box-shadow: 0 0 10px rgba(0, 0, 255, 0.5);
+}
+.activeImp {
+  background-color: #76e0e0 !important;
+  box-shadow: 0 0 10px rgba(0, 0, 255, 0.5);
+}
+.MetricTitle{
+  text-shadow: 2px 2px 4px rgb(224, 119, 119, 0.9);
+}
+.ImperialTitle{
+  text-shadow: 2px 2px 4px rgba(118,224,224,0.9);
+}
+.ImperialCalculateGlow{
+  animation: glow 1.5s infinite alternate;
+}
+.MetricCalculateGlow{
+  animation: glowtwo 1.5s infinite alternate;
+}
+@keyframes glow {
   from {
-    transform: rotate(0deg);
+    text-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
   }
   to {
-    transform: rotate(360deg);
+    text-shadow: 0 0 10px rgba(118, 224, 224, 0.8);
+  }
+}
+@keyframes glowtwo {
+  from {
+    text-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+  }
+  to {
+    text-shadow: 0 0 10px rgba(224, 119, 119,0.8);
   }
 }
